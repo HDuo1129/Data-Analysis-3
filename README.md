@@ -94,9 +94,9 @@ Using country-year panel data, it applies a **Difference-in-Differences (DiD)** 
 ---
 
 ### Methodology
-\[
+$$
 Mortality_{it} = \alpha + \beta (Post_t \times Treat_i) + \gamma_i + \delta_t + X_{it}'\theta + \varepsilon_{it}
-\]
+$$
 - **β** captures the average treatment effect of the vaccine program  
 - Controls for both **country** and **year** fixed effects  
 - Robustness checks include alternate samples and lag structures
