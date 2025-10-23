@@ -74,3 +74,41 @@ Identify high-growth firms using financial indicators from Bisnode panel data (2
 - Visualization & Business Interpretation  
 - Reproducible Jupyter Workflows
 
+
+# Data Analysis 4 — Causal Inference and Policy Evaluation
+
+## Project: Impact of Malaria Vaccination on Child Mortality in Sub-Saharan Africa
+
+### Overview
+This project investigates the **causal impact** of the RTS,S malaria vaccine on under-five mortality rates across Sub-Saharan Africa (2003–2023).  
+Using country-year panel data, it applies a **Difference-in-Differences (DiD)** approach with **two-way fixed effects** to isolate the vaccine’s effect.
+
+---
+
+### Data
+- **Sources:** World Bank, UNDP  
+- **Sample:** 37 countries × 20 years = 740 observations  
+- **Key variables:** under-five mortality rate, malaria incidence, GDP per capita, education, sanitation, water access  
+- **Cleaning:** Outlier removal, log transformation, panel balancing
+
+---
+
+### Methodology
+\[
+Mortality_{it} = \alpha + \beta (Post_t \times Treat_i) + \gamma_i + \delta_t + X_{it}'\theta + \varepsilon_{it}
+\]
+- **β** captures the average treatment effect of the vaccine program  
+- Controls for both **country** and **year** fixed effects  
+- Robustness checks include alternate samples and lag structures
+
+---
+
+### Key Findings
+- **β = –10.64**, significant at 1% level → substantial reduction in child mortality  
+- Adjusted R² = 0.946 → high model fit  
+- Results robust to socioeconomic controls and fixed effects  
+
+
+
+### Tools
+`Python`, `pandas`, `linearmodels`, `statsmodels`, `matplotlib`
